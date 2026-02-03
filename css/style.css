@@ -1,16 +1,40 @@
-body{
+* {
     
-    background-color: rgba(0,0,0,.6);
-}   
-*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-.navbar-brand .ps-3{
-    color: white;
-}
-li a{
-    color: white;
+
 }
 
+.navbar-2 {
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(0, 0, 0);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    padding: 12px 30px;
+}
+
+.navbar-2,
+a,
+ul li {
+    background-color: white;
+}
+
+.navbar-brand .ps-3 {
+    border-radius: 25px;
+}
+
+.inicio {
+    height: calc(100vh - 120px);
+}
+.logo{
+     font-family: 'Pacifico', cursive;
+  font-size: 6rem;
+  font-weight: 400;
+}
+.subtitle {
+  letter-spacing: 6px;
+  font-size: 1rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
