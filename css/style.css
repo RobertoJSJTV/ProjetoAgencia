@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    ;
+    font-family: 'Pacifico', cursive;
 }
 
 .navbar-2 {
@@ -26,11 +26,10 @@ ul li {
 }
 
 .inicio {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 100px);
 }
 
 .logo {
-    font-family: 'Pacifico', cursive;
     font-size: 6rem;
     font-weight: 400;
 }
@@ -40,14 +39,12 @@ ul li {
 }
 
 .conteudo {
-    font-family: 'Pacifico', cursive;
     font-size: 2.5rem;
     font-weight: 600;
     line-height: 1.4;
 }
 
 .subtitle {
-    font-family: 'Pacifico', cursive;
     letter-spacing: 6px;
     font-size: 1rem;
     margin-top: 10px;
@@ -55,9 +52,91 @@ ul li {
 }
 
 .subtitle2 {
-    font-family: 'Pacifico', cursive;
     font-size: 1.4rem;
     margin-top: 10px;
     opacity: 0.8;
     font-weight: 500;
+}
+.cards-container {
+    max-width: 1800px;
+    display: flex;
+    gap: 70px; /* espaço entre os cards */
+    flex-wrap: wrap; /* quebra linha no mobile */
+    justify-content: center; /* centraliza os cards */
+}
+.card {
+    display: flex;
+    max-width: 500px;
+    box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card1:hover {
+    background-color: rgb(10, 10, 10);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: white;
+}
+.card2:hover {
+    background-color: rgba(185, 34, 34, 0.938);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    
+}
+.card3:hover {
+    background-color: rgba(0, 83, 21, 0.938);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: white;
+}
+.card4:hover {
+    background-color: rgba(58, 160, 255, 0.938);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: white;
+}
+.card5:hover {
+    background-color: rgba(0, 82, 158, 0.938);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: white;
+}
+.card6:hover {
+    background-color: rgba(255, 100, 0, 0.938);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: white;
+}
+.creators-Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.card-imagem {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.nome-criador {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.conteudo-principal {
+    margin-top: 20vh;
 }
