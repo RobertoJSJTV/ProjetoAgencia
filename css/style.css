@@ -265,6 +265,25 @@ ul li {
     color: brown;
     text-transform: uppercase;
 }
+
+.card-contact{
+    border-radius: 15px;
+    display: flex;
+    border: 2px solid rgba(54, 54, 54, 0.205);
+    padding: 50px 20px;
+    background-color: rgba(59, 58, 58, 0.76);
+}
+.contato h4{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: white;
+}
+.contato-subtitle{
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 20px 0;
+}
+
 /* Media queries para responsividade em tablets e mobile */
 @media (max-width: 992px) {
     .navbar-2 {
@@ -380,5 +399,10 @@ ul li {
 }
 .subt{
     font-size: 0.5em;
+}
+.contato h4{
+    font-size: 1.1em;
+    font-weight: 100;
+    color: white;
 }
 }
