@@ -349,6 +349,9 @@ ul li {
 }
 
 @media (max-width: 576px) {
+    *{
+        font-family: sans-serif;
+    }
     .navbar-2 {
         width: calc(100% - 2rem);
         padding: 8px 12px;
@@ -391,7 +394,9 @@ ul li {
     .conteudo-principal {
         margin-top: 10vh;
     }
-
+.subtextos{
+    font-size: 0.5em;
+}
     .fbIcon,
     .netflixIcon,
     .skolIcon,
