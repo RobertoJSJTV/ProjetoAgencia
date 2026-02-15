@@ -451,8 +451,21 @@ ul li {
     }
 
     .contato h4 {
-        font-size: 1.1em;
+        font-size: 1.0em;
         font-weight: 100;
         color: white;
+    }
+
+    .contato-subtitle {
+        font-size: 1.0em;
+    }
+
+    .text-agen {
+        font-size: 0.8em;
+    }
+
+    .p1 {
+        color: black;
+        font-weight: bold;
     }
 }
