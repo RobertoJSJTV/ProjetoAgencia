@@ -23,5 +23,7 @@ function textoIngles(){
 
     document.querySelector('.btn1').textContent = 'CONTACT ME';
 
+    document.querySelector('.dev').innerHTML = 'Developed by: <a href="https://robertojsjtv.github.io/Portifolio/" class="" style="text-decoration: none;">Roberto Júnior</a>';
+
     document.querySelector('.text-end').textContent = '© 2024 Nexa Prime. All rights reserved.';
 }
