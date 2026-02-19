@@ -1,7 +1,7 @@
 function textoIngles(){
 
     document.querySelector('.nav-link.about').textContent = 'About';
-    document.querySelector('.nav-link.history').textContent = 'History';
+    document.querySelector('.nav-link.history').textContent = 'Brands';
 
     document.querySelector('.subtitle').textContent = 'AGENCY';
 
