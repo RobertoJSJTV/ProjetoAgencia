@@ -27,3 +27,28 @@ function textoIngles(){
 
     document.querySelector('.text-end').textContent = '© 2024 Nexa Prime. All rights reserved.';
 }
+
+// Dark Mode Toggle
+let darkMode = localStorage.getItem('dark-mode')
+const themeSwitch = document.getElementById('theme-switch')
+
+const enableDarkMode = () => {
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('dark-mode', 'active')
+}
+
+const disableDarkMode = () => {
+    document.body.classList.remove('dark-mode');
+    localStorage.setItem('dark-mode', null);
+}
+
+// Ativar dark mode se estava salvo anteriormente
+if(darkMode === 'active') {
+    enableDarkMode()
+}
+
+// Event listener para o botão de tema
+themeSwitch.addEventListener("click", () => {
+    darkMode = localStorage.getItem('dark-mode')
+    darkMode !== "active" ? enableDarkMode() : disableDarkMode()
+});

@@ -1,3 +1,41 @@
+:root {
+    /* Colors - Branco e Preto */
+    --white: #fff;
+    --black: #000;
+    --light-gray: #d5d5d5;
+    --medium-gray: #505050;
+    --dark-gray: #707070;
+    --placeholder-gray: rgb(196, 196, 196);
+    
+    /* Dark Mode */
+    --template-dark-mode-bg: #000;
+    --template-dark-mode-button-bg: rgb(196, 196, 196);
+    
+    /* Card Hover Colors */
+    --card1-hover: rgb(10, 10, 10);
+    --card2-hover: rgba(185, 34, 34, 0.938);
+    --card3-hover: rgba(0, 83, 21, 0.938);
+    --card4-hover: rgba(58, 160, 255, 0.938);
+    --card5-hover: rgba(0, 82, 158, 0.938);
+    --card6-hover: rgba(255, 100, 0, 0.938);
+    
+    /* Text Colors */
+    --text-dark: rgba(34, 34, 34, 0.767);
+    --text-brown: brown;
+    --text-white: white;
+    --text-light-white: rgba(255, 255, 255, 0.8);
+    
+    /* Background Colors */
+    --bg-card: rgba(59, 58, 58, 0.76);
+    --bg-border-light: rgba(54, 54, 54, 0.205);
+    
+    /* Shadow Colors */
+    --shadow-white: rgb(255, 255, 255);
+    --shadow-black: rgb(0, 0, 0);
+}
+.dark-mode{
+    background: var(--template-dark-mode-bg);
+}
 * {
 
     margin: 0;
@@ -6,23 +44,149 @@
     font-family: 'Pacifico', cursive;
 }
 
+body{
+    background-color: var(--white);
+}
+#theme-switch{
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+#theme-switch span:last-child{
+    display: none;
+}
+#theme-switch:hover{
+    color: white;
+    background-color: var(--card3-hover);
+    transition: 0.5s ease;
+}
+.dark-mode #theme-switch span:first-child{
+    display: none;
+}
+.dark-mode #theme-switch span:last-child{
+    display: block;
+}
+.dark-mode #theme-switch{
+    background-color: #707070;
+    box-shadow: var(--card5-hover);
+}
+body.dark-mode {
+    background: var(--template-dark-mode-bg);
+    color: var(--placeholder-gray);
+}
+
+.inicio.dark-mode {
+    background: var(--template-dark-mode-bg);
+    color: var(--template-dark-mode-button-bg);
+}
+
 .navbar-2 {
     font-family: 'Pacifico', cursive;
     width: 60%;
-    box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(0, 0, 0);
+    box-shadow: 0 4px 8px 0 var(--shadow-white), 0 6px 20px 0 var(--shadow-black);
     border-radius: 50px;
     backdrop-filter: blur(10px);
     padding: 12px 30px;
 }
 
+.dark-mode .navbar-2 {
+    box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.navbar-2.darkMode {
+    background-color: var(--black);
+}
+
+/* input[type="checkbox"] {
+    appearance: none;
+    width: 90px;
+    height: 30px;
+    background-color: #707070;
+    border-radius: 50px;
+    position: absolute;
+    cursor: pointer;
+    transition: .3s;
+    right: 40px;
+    top: 9px;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #d5d5d5;
+    border-radius: 50%;
+    left: 5px;
+    top: 3px;
+    transition: .3s;
+}
+
+input[type="checkbox"]::after {
+    content: "Light";
+    position: absolute;
+    color: #34384b;
+    font-size: 10px;
+    left: 5px;
+    top: 7px;
+    transition: .3s;
+}
+
+input[type="checkbox"]:checked {
+    background: linear-gradient(91deg, #ff01a5d4, #4b00ffd4);
+}
+
+input[type="checkbox"]:checked::before {
+    background: #000;
+    left: 60px;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "Dark";
+    color: #fff;
+    left: 65px;
+} */
+
 .navbar-2,
 a,
 ul li {
-    background-color: white;
+    background-color: var(--white);
 }
 
+.dark-mode .navbar-2,
+.dark-mode a,
+.dark-mode ul li {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.dark-mode .nav-link {
+    color: var(--white) !important;
+}
+
+.dark-mode .nav-link:hover {
+    color: rgb(100, 200, 255) !important;
+}
+.dark-mode #theme-switch{
+    color: var(--white);
+}
+.dark-mode #marcas{
+    color: var(--text-white);
+}
 .navbar-brand .ps-3 {
     border-radius: 25px;
+}
+
+.dark-mode .navbar-brand {
+    color: var(--white) !important;
 }
 
 .inicio {
@@ -32,6 +196,10 @@ ul li {
 .logo {
     font-size: 6rem;
     font-weight: 400;
+}
+
+.dark-mode .logo {
+    color: var(--white);
 }
 
 .textoMarca {
@@ -44,6 +212,10 @@ ul li {
     line-height: 1.4;
 }
 
+.dark-mode .conteudo {
+    color: var(--white);
+}
+
 .subtitle {
     letter-spacing: 6px;
     font-size: 1rem;
@@ -51,11 +223,19 @@ ul li {
     opacity: 0.8;
 }
 
+.dark-mode .subtitle {
+    color: var(--white);
+}
+
 .subtitle2 {
     font-size: 1.4rem;
     margin-top: 10px;
     opacity: 0.8;
     font-weight: 500;
+}
+
+.dark-mode .subtitle2 {
+    color: var(--text-light-white);
 }
 
 .cards-container {
@@ -72,7 +252,7 @@ ul li {
 .card {
     display: flex;
     max-width: 500px;
-    box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(0, 0, 0);
+    box-shadow: 0 4px 8px 0 var(--shadow-white), 0 6px 20px 0 var(--shadow-black);
     backdrop-filter: blur(10px);
     padding: 5px 5px 5px 5px;
     margin-bottom: 60px;
@@ -80,16 +260,21 @@ ul li {
     justify-content: center;
 }
 
+.dark-mode .card {
+    background-color: rgba(80, 80, 80, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
 .card1:hover {
-    background-color: rgb(10, 10, 10);
+    background-color: var(--card1-hover);
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    color: white;
+    color: var(--white);
 }
 
 .card2:hover {
-    background-color: rgba(185, 34, 34, 0.938);
+    background-color: var(--card2-hover);
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
@@ -97,35 +282,35 @@ ul li {
 }
 
 .card3:hover {
-    background-color: rgba(0, 83, 21, 0.938);
+    background-color: var(--card3-hover);
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    color: white;
+    color: var(--white);
 }
 
 .card4:hover {
-    background-color: rgba(58, 160, 255, 0.938);
+    background-color: var(--card4-hover);
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    color: white;
+    color: var(--white);
 }
 
 .card5:hover {
-    background-color: rgba(0, 82, 158, 0.938);
+    background-color: var(--card5-hover);
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    color: white;
+    color: var(--white);
 }
 
 .card6:hover {
-    background-color: rgba(255, 100, 0, 0.938);
+    background-color: var(--card6-hover);
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    color: white;
+    color: var(--white);
 }
 
 .creators-Card {
@@ -139,7 +324,7 @@ ul li {
     width: 100%;
     height: 500px;
     object-fit: cover;
-    border: 2px solid black;
+    border: 2px solid var(--black);
     border-radius: 15px;
 }
 
@@ -147,6 +332,10 @@ ul li {
     margin-top: 10px;
     font-weight: 600;
     font-size: 1.1rem;
+}
+
+.dark-mode .nome-criador {
+    color: var(--white);
 }
 
 .conteudo-principal {
@@ -169,6 +358,10 @@ ul li {
     background-image: url('../img/fb.png');
 }
 
+.dark-mode .fbIcon {
+    background-image: url('../img/fb.png');
+}
+
 .netflixIcon {
     width: 100%;
     height: 160px;
@@ -184,6 +377,10 @@ ul li {
     background-image: url('../img/Netflix.png');
 }
 
+.dark-mode .netflixIcon {
+    background-image: url('../img/Netflix.png');
+}
+
 .skolIcon {
     width: 100%;
     height: 160px;
@@ -195,6 +392,10 @@ ul li {
 }
 
 .skolIcon:hover {
+    background-image: url('../img/skol.png');
+}
+
+.dark-mode .skolIcon {
     background-image: url('../img/skol.png');
 }
 
@@ -214,6 +415,11 @@ ul li {
     background-size: 250%;
 }
 
+.dark-mode .ferrariIcon {
+    background-image: url('../img/ferrari-overview-removebg-preview.png');
+    background-size: 250%;
+}
+
 .SamsungIcon {
     margin-top: 50px;
     width: 100%;
@@ -229,6 +435,10 @@ ul li {
     background-image: url('../img/samsung.png');
 }
 
+.dark-mode .SamsungIcon {
+    background-image: url('../img/samsung.png');
+}
+
 .kfcIcon {
     margin-top: 50px;
     width: 100%;
@@ -241,6 +451,10 @@ ul li {
 }
 
 .kfcIcon:hover {
+    background-image: url('../img/kfc.png');
+}
+
+.dark-mode .kfcIcon {
     background-image: url('../img/kfc.png');
 }
 
@@ -265,40 +479,57 @@ ul li {
 }
 
 .texto1 {
-    color: rgba(34, 34, 34, 0.767);
+    color: var(--text-dark);
     font-size: 1.3em;
     text-align: justify;
     margin-right: 15px;
 }
 
+.dark-mode .texto1 {
+    color: var(--text-light-white);
+}
+
 .subtextos {
-    color: brown;
+    color: var(--text-brown);
     text-transform: uppercase;
+}
+
+.dark-mode .subtextos {
+    color: rgb(255, 150, 100);
 }
 
 .card-contact {
     border-radius: 15px;
     display: flex;
-    border: 2px solid rgba(54, 54, 54, 0.205);
+    border: 2px solid var(--bg-border-light);
     padding: 50px 20px;
-    background-color: rgba(59, 58, 58, 0.76);
+    background-color: var(--bg-card);
+}
+
+.dark-mode .card-contact {
+    background-color: rgba(80, 80, 80, 0.5);
+    border-color: var(--medium-gray);
 }
 
 .contato h4 {
     font-size: 1.5em;
     font-weight: 600;
-    color: white;
+    color: var(--text-white);
 }
 
 .contato-subtitle {
     font-size: 1.2em;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-light-white);
     margin: 20px 0;
 }
 
 .text-agen {
     font-size: 1.1em;
-    color: rgba(48, 47, 47, 0.8);
+    color: var(--text-dark);
+}
+
+.dark-mode .text-agen {
+    color: var(--text-light-white);
 }
 
 .social-icons {
@@ -308,14 +539,46 @@ ul li {
 }
 
 .social-icons a {
-    color: #000000;
+    color: var(--black);
     font-size: 30px;
     transition: transform 0.2s ease;
 }
 
 .social-icons a:hover {
     transform: scale(1.2);
-    color: #505050;
+    color: var(--medium-gray);
+}
+
+.dark-mode .social-icons a {
+    color: var(--white);
+}
+
+.dark-mode .social-icons a:hover {
+    color: rgb(100, 200, 255);
+}
+
+.dark-mode .btn-outline-light {
+    color: var(--white) !important;
+    border-color: var(--white) !important;
+}
+
+.dark-mode .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: var(--white) !important;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p {
+    color: var(--white);
+}
+
+.dark-mode footer {
+    border-color: var(--medium-gray);
 }
 
 
@@ -432,8 +695,12 @@ ul li {
         font-size: 0.9em;
     }
 
+    .dark-mode .titulo2 {
+        color: var(--white);
+    }
+
     .texto1 {
-        color: rgba(34, 34, 34, 0.767);
+        color: var(--text-dark);
         font-size: 0.8em;
         text-align: justify;
         margin-right: 15px;
@@ -453,7 +720,7 @@ ul li {
     .contato h4 {
         font-size: 1.0em;
         font-weight: 100;
-        color: white;
+        color: var(--text-white);
     }
 
     .contato-subtitle {
@@ -465,7 +732,16 @@ ul li {
     }
 
     .p1 {
-        color: black;
+        color: var(--black);
         font-weight: bold;
     }
+    #theme-switch{
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
 }
